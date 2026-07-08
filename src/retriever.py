@@ -52,7 +52,7 @@ def build_context(top_chunks: list[dict])-> str:
     """
     context = []
     for x in top_chunks:
-        text = x["text"]
+        text = x["chunk"]["text"] 
         context.append(text)
 
     context = "\n\n".join(context)

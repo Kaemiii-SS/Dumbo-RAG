@@ -41,7 +41,7 @@ def run_pipeline(pdf_path:str, query:str, api_key: str, embedding_model: str = "
 
     context = build_context(top_chunks)
 
-    prompt = build_prompt(top_chunks, query) 
+    prompt = build_prompt(context, query) 
 
     output = generate_response(client, prompt, llm_model)
 
