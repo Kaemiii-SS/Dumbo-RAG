@@ -39,3 +39,14 @@ def retrieve_chunks(chunks: list[dict], query_embedding: np.ndarray, top_k: int 
 
     top_chunks = sorted(results, key=lambda x: x["score"] ,reverse=True)[:top_k]
     return top_chunks
+
+def build_context(top_chunks: list[dict])-> str:
+
+    context = []
+    for x in top_chunks:
+        text = x["text"]
+        context.append(text)
+
+    context = "\n\n".join(context)
+
+    return context
