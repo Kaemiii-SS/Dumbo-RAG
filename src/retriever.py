@@ -41,7 +41,15 @@ def retrieve_chunks(chunks: list[dict], query_embedding: np.ndarray, top_k: int 
     return top_chunks
 
 def build_context(top_chunks: list[dict])-> str:
+    """
+        builds context in string from the top k retrieved chunks
 
+        Args:
+            top_chunks: The retrieved top K chunks through cosine similarity
+
+        Returns:
+            A string of context extracted from the retrieved chunks
+    """
     context = []
     for x in top_chunks:
         text = x["text"]
