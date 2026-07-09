@@ -68,7 +68,7 @@ Dumbo-RAG/
 ## Installation
 
 ```bash
-git clone <repository-url>
+git clone https://github.com/Kaemiii-SS/Dumbo-RAG.git
 
 cd Dumbo-RAG
 
